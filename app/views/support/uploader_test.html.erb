@@ -17,7 +17,7 @@
         <%# end %>
 
 
-        <%= s4_uploader_form callback_url: s3_upload_callback_url, callback_param: "file[file_url]", id: "s3_uploader" do %>
+        <%= s3_uploader_form callback_url: s3_upload_callback_url, callback_param: "file[file_url]", id: "s3_uploader" do %>
             <%# file_field_tag :file, multiple: true %>
         <% end %>
 
