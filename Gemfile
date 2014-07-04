@@ -40,3 +40,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 's3_direct_upload', '~> 0.1.7'
 gem 'aws-sdk', '~> 1.46.0'
+
+group :production do
+  gem "rails_12factor"
+end
