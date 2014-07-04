@@ -1,7 +1,3 @@
-<div class="content">
-  <h1>Image Uploader Demo</h1>
-  <p>Made by Ivan Wang. Contact him via <a href="mailto:ivawzh@gmail.com">ivawzh@gmail.com</a></p>
-</div>
 
 <div class="content">
 
@@ -18,8 +14,8 @@
       <section class="main">
 
 
-      <form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>
-      <input id="ticket_query" name="ticket[query]" type="hidden" value="111" />
+        <form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>
+          <input id="ticket_query" name="ticket[query]" type="hidden" value="vvvvvvv" />
 
           <fieldset>
 
@@ -34,7 +30,6 @@
                 <option value="app">Application</option>
                 <option value="database">Database (Heroku Postgres)</option>
                 <option value="addon">Add-on</option>
-                <option value="getting-started">Getting Started</option>
                 <option value="billing">Billing and Payments</option>
                 <option value="feedback">Product Feedback or Issue</option>
                 <option value="security">Heroku Security</option></select>
@@ -44,6 +39,7 @@
               <label for="ticket_application">Which application?</label>
               <select class="chzn-select" data-placeholder="Please choose&hellip;" id="ticket_application" name="ticket[application]"><option value=""></option>
                 <option value="badrev">badrev</option>
+                <option value="heroku-image-uploader">heroku-image-uploader</option>
                 <option value="sample-app-ivan">sample-app-ivan</option></select>
               <p class="hidden loading"><img alt="Ajax loader2" src="https://d3twwm4dp9cdvj.cloudfront.net/assets/ajax-loader2-628228010b8c6a2b24c34e59cde4ad16.gif" /></p>
             </div>
@@ -78,23 +74,8 @@
               </div>
             </div>
 
-            <%= s3_uploader_form id:"new_ticket",
-                                 class:'new_ticket',
-                                 callback_url: s3_upload_callback_url,
-                                 callback_param:"file[file_url]",
-                                 expiration: 24.hours.from_now.utc.iso8601,
-                                 max_file_size: 100.megabytes do %>
+
             <div class="field description" id="ticket_body">
-              <label for="image_uploader">Upload an image to demonstrate the situation. (Only allow JPG, PNG and GIF format.)</label>
-              <%= file_field_tag :file, multiple: true %>
-
-              <div class="upload js-progress-bars">
-                <div class="progress">
-                  <div class="bars"> </div>
-                </div>
-              </div>
-            <% end %>
-
               <label class="toggle-on-category app addon database billing security getting-started" for="ticket_description">Please describe your issue.</label>
               <label class="toggle-on-category feedback" for="ticket_description">What&#39;s on your mind?</label>
               <p class="instructions toggle-on-category feedback">
@@ -117,12 +98,12 @@
                 </div>
                 <div id="preview_tab"></div>
               </div>
-
-                    <!--<textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">-->
-              <!--</textarea>-->
-                    <!--<p class="markdown">-->
-                      <!--Parsed with <a href="http://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a>.-->
-                    <!--</p>-->
+              <!--
+                    <textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">
+              </textarea>
+                    <p class="markdown">
+                      Parsed with <a href="http://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a>.
+                    </p> -->
             </div>
 
             <div class="field description app addon database billing security getting-started">
@@ -130,6 +111,10 @@
 
                 <h3>Estimated Response Time</h3>
 
+                <p>
+                  Heroku Support is <strong>celebrating Independence Day</strong>.
+                  We will resume service on <strong>Monday</strong> at 9 AM Eastern time.
+                </p>
 
                 <p>
                   Our goal is to respond to your inquiry within 3 business days. Please note that it may take longer depending on current volume.
@@ -154,133 +139,21 @@
 
           </fieldset>
 
-
-
-        <!--<form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>-->
-          <!--<input id="ticket_query" name="ticket[query]" type="hidden" value="111" />-->
-
-          <!--<fieldset>-->
-
-
-            <!--<script type="text/javascript">-->
-<!--                new TicketForm($("form#new_ticket"));-->
-            <!--</script>-->
-
-            <!--<div class="field category">-->
-              <!--<label for="ticket_category">What can we help you with?</label>-->
-              <!--<select class="chzn-select chzn-no-search" data-placeholder="Please choose&hellip;" id="ticket_category" name="ticket[category]"><option value=""></option>-->
-                <!--<option value="app">Application</option>-->
-                <!--<option value="database">Database (Heroku Postgres)</option>-->
-                <!--<option value="addon">Add-on</option>-->
-                <!--<option value="getting-started">Getting Started</option>-->
-                <!--<option value="billing">Billing and Payments</option>-->
-                <!--<option value="feedback">Product Feedback or Issue</option>-->
-                <!--<option value="security">Heroku Security</option></select>-->
-            <!--</div>-->
-
-            <!--<div class="field app">-->
-              <!--<label for="ticket_application">Which application?</label>-->
-              <!--<select class="chzn-select" data-placeholder="Please choose&hellip;" id="ticket_application" name="ticket[application]"><option value=""></option>-->
-                <!--<option value="badrev">badrev</option>-->
-                <!--<option value="sample-app-ivan">sample-app-ivan</option></select>-->
-              <!--<p class="hidden loading"><img alt="Ajax loader2" src="https://d3twwm4dp9cdvj.cloudfront.net/assets/ajax-loader2-628228010b8c6a2b24c34e59cde4ad16.gif" /></p>-->
-            <!--</div>-->
-
-            <!--<div class="field addon">-->
-              <!--<label for="ticket_addon">Which add-on?</label>-->
-              <!--<select class="chzn-select" data-placeholder="Please choose&hellip;" id="ticket_addon" name="ticket[addon]"><option value=""></option>-->
-                <!--<option value="other">An add-on I have yet to install</option></select>-->
-            <!--</div>-->
-
-            <!--<div class="field database">-->
-              <!--<label for="ticket_database">Which database?</label>-->
-              <!--<select class="chzn-select" data-placeholder="Please choose&hellip;" id="ticket_database" name="ticket[database]"><option value=""></option>-->
-                <!--<option value="other">A database I have yet to install</option></select>-->
-            <!--</div>-->
-
-            <!--<div class="field access">-->
-              <!--<label for="ticket_allow_access">May Heroku staff access your application&#39;s production environment?</label>-->
-              <!--<p class="instructions">-->
-                <!--As necessary, this may include viewing source code or connecting to-->
-                <!--Heroku Postgres databases.  Heroku staff will always ask for explicit-->
-                <!--permission before making modifications.-->
-
-              <!--</p>-->
-              <!--<div class="block radios">-->
-          <!--<span>-->
-            <!--<input id="ticket_code_access_1" name="ticket[code_access]" type="radio" value="1" /><label for="ticket_code_access_1">Yes</label>-->
-          <!--</span>-->
-          <!--<span>-->
-            <!--<input id="ticket_code_access_2" name="ticket[code_access]" type="radio" value="2" /><label for="ticket_code_access_2">No</label>-->
-          <!--</span>-->
-              <!--</div>-->
-            <!--</div>-->
-
-
-            <!--<div class="field description" id="ticket_body">-->
-              <!--<label class="toggle-on-category app addon database billing security getting-started" for="ticket_description">Please describe your issue.</label>-->
-              <!--<label class="toggle-on-category feedback" for="ticket_description">What&#39;s on your mind?</label>-->
-              <!--<p class="instructions toggle-on-category feedback">-->
-                <!--If your issue can be reproduced on a specific application, please choose <q>Application</q> above.-->
-              <!--</p>-->
-
-              <!--<div id="preview_tabs">-->
-                <!--<ul>-->
-                  <!--<li class="active"><a href="#write_tab">Write</a></li>-->
-                  <!--<li><a href="#preview_tab">Preview</a></li>-->
-                <!--</ul>-->
-
-                <!--<p class="markdown">-->
-                  <!--Parsed with <a href="http://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a>-->
-                <!--</p>-->
-
-                <!--<div id="write_tab">-->
-                  <!--<textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">-->
-                  <!--</textarea>-->
-                <!--</div>-->
-                <!--<div id="preview_tab"></div>-->
-              <!--</div>-->
-              <!--<!---->
-                    <!--<textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">-->
-              <!--</textarea>-->
-                    <!--<p class="markdown">-->
-                      <!--Parsed with <a href="http://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a>.-->
-                    <!--</p> -->-->
-            <!--</div>-->
-
-            <!--<div class="field description app addon database billing security getting-started">-->
-              <!--<div class="estimated-response-time box">-->
-
-                <!--<h3>Estimated Response Time</h3>-->
-
-
-                <!--<p>-->
-                  <!--Our goal is to respond to your inquiry within 3 business days. Please note that it may take longer depending on current volume.-->
-                <!--</p>-->
-
-                <!--<h3>Running a critical app?</h3>-->
-                <!--<p>-->
-                  <!--Heroku's Premium Support offering includes a 24&times;7 Response SLA and more. Please <a href="https://www.heroku.com/critical">contact us</a> for further details.-->
-                <!--</p>-->
-              <!--</div>-->
-
-              <!--<p><input class="button" name="commit" type="submit" value="Create Ticket" /></p>-->
-            <!--</div>-->
-
-            <!--<div class="field description feedback">-->
-              <!--<div class="box">-->
-                <!--<h3>Thanks for the report!</h3>-->
-                <!--Heroku reads all submissions, but may not respond to your request individually.-->
-              <!--</div>-->
-              <!--<p><input class="button" name="commit" type="submit" value="Submit Report" /></p>-->
-            <!--</div>-->
-
-          <!--</fieldset>-->
-
-        <!--</form>-->
-
         </form>
       </section>
+      <aside class="sidebar">
+        <div class="box">
+
+
+          <div id="statusBox">
+            <div class="loading"></div>
+          </div>
+          <p style="display: none" id="statusBrokenMessage">Check Heroku platform availability on our <a href="https://status.heroku.com">status site</a>.</p>
+
+        </div>
+
+      </aside>
+
     </div>
   </div>
 </div>
