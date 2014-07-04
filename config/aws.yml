@@ -1,14 +1,18 @@
 defaults: &defaults
-  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
-  secret_access_key: "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"
 
 development:
   <<: *defaults
   bucket: "herokusupport"
 
+  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
+  secret_access_key: "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"
+
 test:
   <<: *defaults
   bucket: "herokusupport"
+
+  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
+  secret_access_key: "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"
 
 production:
   <<: *defaults
