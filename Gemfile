@@ -37,3 +37,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 's3_direct_upload', '~> 0.1.7'
+gem 'aws-sdk', '~> 1.46.0'

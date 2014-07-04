@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'support/index'
 
   root 'support#index'
+  post "upload_file_callback", to: 'support#s3_upload_callback', as: :s3_upload_callback
 
 
   # The priority is based upon order of creation: first created -> highest priority.
