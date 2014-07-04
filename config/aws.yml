@@ -1,27 +1,22 @@
 defaults: &defaults
+  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
+  secret_access_key: "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"
+  s3_region: "s3-ap-southeast-2"
 
 development:
   <<: *defaults
   bucket: "herokusupport"
 
-  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
-  secret_access_key: "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"
-
 test:
   <<: *defaults
   bucket: "herokusupport"
 
-  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
-  secret_access_key: "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"
-
 production:
   <<: *defaults
   bucket: "herokusupport"
-  access_key_id: "AKIAJLCNEWWUENYOSR6Q"
-  secret_access_key: "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"
 
 
-##for heroku, use heroku:config set and the followings:
+##for real heroku production, use heroku:config set and the followings:
 #  access_key_id: <%=ENV["AWS_ACCESS_KEY_ID"]%>
 #  secret_access_key: <%=ENV["AWS_SECRET_ACCESS_KEY"]%>
 #  bucket: "herokusupport"
