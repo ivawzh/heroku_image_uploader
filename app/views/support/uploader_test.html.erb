@@ -1,19 +1,17 @@
 
-        <%= s3_uploader_form  do %>
-            <!--id:"s3_uploader", callback_param:"file[file_url]"-->
-                             <!--# expiration: 24.hours.from_now,-->
-                             <!--# expiration: 24.hours.from_now.utc.iso8601,-->
-                             <!--# max_file_size: 100.megabytes-->
-                             <!--# callback_url: s3_upload_callback_url,-->
+        <%# s3_uploader_form id:"s3_uploader",
+                             callback_url: s3_upload_callback_url,
+                             callback_param:"file[file_url]",
+                             expiration: 24.hours.from_now.utc.iso8601,
+                             max_file_size: 100.megabytes do %>
 
 
+                  <%# file_field_tag :file, multiple: true %>
 
-                  <%= file_field_tag :file, multiple: true %>
+                  <!--<div class="upload js-progress-bars">-->
+                    <!--<div class="progress">-->
+                      <!--<div class="bars"> </div>-->
+                    <!--</div>-->
+                  <!--</div>-->
 
-                  <div class="upload js-progress-bars">
-                    <div class="progress">
-                      <div class="bars"> </div>
-                    </div>
-                  </div>
-
-        <% end %>
+        <%# end %>
