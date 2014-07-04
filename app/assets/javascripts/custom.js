@@ -1,5 +1,5 @@
 $(function() {
-    $('#new_ticket').S3Uploader(
+    $('#s3_uploader').S3Uploader(
         {
 //            path: 'temp/images/',
             remove_completed_progress_bar: false,
@@ -16,7 +16,7 @@ $(function() {
     );
 
     // error handling
-    $('#new_ticket').bind('s3_upload_failed', function(e, content) {
+    $('#s3_uploader').bind('s3_upload_failed', function(e, content) {
         console.log(content.filename + ' failed to upload:' + content.error_thrown);
         return alert(content.filename + ' failed to upload:' + content.error_thrown);
     });

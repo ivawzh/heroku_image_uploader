@@ -17,12 +17,9 @@
     <div class="container">
       <section class="main">
 
-        <%= s3_uploader_form id:"new_ticket",
-                             class:'new_ticket',
-                             callback_url: s3_upload_callback_url,
-                             callback_param:"file[file_url]",
-                             expiration: 24.hours.from_now.utc.iso8601,
-                             max_file_size: 100.megabytes do %>
+
+      <form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>
+      <input id="ticket_query" name="ticket[query]" type="hidden" value="111" />
 
           <fieldset>
 
@@ -81,7 +78,12 @@
               </div>
             </div>
 
-
+            <%= s3_uploader_form id:"new_ticket",
+                                 class:'new_ticket',
+                                 callback_url: s3_upload_callback_url,
+                                 callback_param:"file[file_url]",
+                                 expiration: 24.hours.from_now.utc.iso8601,
+                                 max_file_size: 100.megabytes do %>
             <div class="field description" id="ticket_body">
               <label for="image_uploader">Upload an image to demonstrate the situation. (Only allow JPG, PNG and GIF format.)</label>
               <%= file_field_tag :file, multiple: true %>
@@ -91,7 +93,7 @@
                   <div class="bars"> </div>
                 </div>
               </div>
-
+            <% end %>
 
               <label class="toggle-on-category app addon database billing security getting-started" for="ticket_description">Please describe your issue.</label>
               <label class="toggle-on-category feedback" for="ticket_description">What&#39;s on your mind?</label>
@@ -152,7 +154,7 @@
 
           </fieldset>
 
-      <% end %>
+
 
         <!--<form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>-->
           <!--<input id="ticket_query" name="ticket[query]" type="hidden" value="111" />-->
@@ -238,12 +240,12 @@
                 <!--</div>-->
                 <!--<div id="preview_tab"></div>-->
               <!--</div>-->
-              <!--&lt;!&ndash;-->
+              <!--<!---->
                     <!--<textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">-->
               <!--</textarea>-->
                     <!--<p class="markdown">-->
                       <!--Parsed with <a href="http://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a>.-->
-                    <!--</p> &ndash;&gt;-->
+                    <!--</p> -->-->
             <!--</div>-->
 
             <!--<div class="field description app addon database billing security getting-started">-->
@@ -276,6 +278,8 @@
           <!--</fieldset>-->
 
         <!--</form>-->
+
+        </form>
       </section>
     </div>
   </div>
