@@ -15,3 +15,15 @@
                   <!--</div>-->
 
         <%# end %>
+
+
+        <%= s3_uploader_form callback_url: s3_upload_callback_url, callback_param: "file[file_url]", id: "s3_uploader" do %>
+            <%= file_field_tag :file, multiple: true %>
+        <% end %>
+
+        <script id="template-upload" type="text/x-tmpl">
+            <div id="file-{%=o.unique_id%}" class="upload">
+              {%=o.name%}
+              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+            </div>
+        </script>
