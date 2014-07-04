@@ -1,0 +1,35 @@
+/* line 1, C:/Ruby200/lib/ruby/gems/2.0.0/gems/s3_direct_upload-0.1.7/app/assets/stylesheets/s3_direct_upload_progress_bars.css.scss */
+.upload {
+  border-top: solid 1px #CCC;
+  width: 400px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+/* line 7, C:/Ruby200/lib/ruby/gems/2.0.0/gems/s3_direct_upload-0.1.7/app/assets/stylesheets/s3_direct_upload_progress_bars.css.scss */
+.upload .progress {
+  margin-top: 8px;
+  border: solid 1px #555;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/* line 12, C:/Ruby200/lib/ruby/gems/2.0.0/gems/s3_direct_upload-0.1.7/app/assets/stylesheets/s3_direct_upload_progress_bars.css.scss */
+.upload .progress .bar {
+  height: 10px;
+  background: #3EC144;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
