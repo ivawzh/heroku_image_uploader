@@ -1,11 +1,11 @@
 
-        <%= s3_uploader_form id:"s3_uploader",
+        <%= s3_uploader_form id:"s3_uploader", callback_param:"file[file_url]" do %>
 
                              # expiration: 24.hours.from_now,
                              # expiration: 24.hours.from_now.utc.iso8601,
                              # max_file_size: 100.megabytes
                              # callback_url: s3_upload_callback_url,
-                             callback_param:"file[file_url]" do %>
+
 
 
                   <%= file_field_tag :file, multiple: true %>
