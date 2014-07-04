@@ -85,8 +85,13 @@
             <div class="field description" id="ticket_body">
               <label for="image_uploader">Upload an image to demonstrate the situation. (Only allow JPG, PNG and GIF format.)</label>
               <%= file_field_tag :file, multiple: true %>
-              <br/>
-              <br/>
+
+              <div class="upload js-progress-bars">
+                <div class="progress">
+                  <div class="bars"> </div>
+                </div>
+              </div>
+
 
               <label class="toggle-on-category app addon database billing security getting-started" for="ticket_description">Please describe your issue.</label>
               <label class="toggle-on-category feedback" for="ticket_description">What&#39;s on your mind?</label>

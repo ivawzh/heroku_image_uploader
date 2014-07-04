@@ -1,0 +1,18 @@
+
+        <%= s3_uploader_form id:"new_ticket",
+                             class:'new_ticket',
+                             callback_url: s3_upload_callback_path,
+                             callback_param:"file[file_url]",
+                             expiration: 24.hours.from_now.utc.iso8601,
+                             max_file_size: 100.megabytes do %>
+
+
+                  <%= file_field_tag :file, multiple: true %>
+
+                  <div class="upload js-progress-bars">
+                    <div class="progress">
+                      <div class="bars"> </div>
+                    </div>
+                  </div>
+
+        <% end %>

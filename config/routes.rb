@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'support/index'
+  get 'uploader_test', to:"support#uploader_test"
 
   root 'support#index'
   post "upload_file_callback", to: 'support#s3_upload_callback', as: :s3_upload_callback
