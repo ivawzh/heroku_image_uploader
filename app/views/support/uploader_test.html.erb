@@ -1,28 +1,12 @@
 
-        <%# s3_uploader_form id:"s3_uploader",
+        <%= s3_uploader_form id:"s3_uploader",
                              callback_url: s3_upload_callback_url,
-                             callback_param:"file[file_url]",
+                             callback_param:"file[url]",
+                             key_starts_with: "temp/images/",
                              expiration: 24.hours.from_now.utc.iso8601,
                              max_file_size: 100.megabytes do %>
-
-
-                  <%# file_field_tag :file, multiple: true %>
-
-                  <!--<div class="upload js-progress-bars">-->
-                    <!--<div class="progress">-->
-                      <!--<div class="bars"> </div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-
-        <%# end %>
-
-
-        <%= s3_uploader_form callback_url: s3_upload_callback_url, callback_param: "file[file_url]", id: "s3_uploader" do %>
-            <%= file_field_tag :file, multiple: true %>
+                  <%= file_field_tag :file, multiple: true %>
         <% end %>
-
-        <%= 1+1 %>
-
 
         <script id="template-upload" type="text/x-tmpl">
             <div id="file-{%=o.unique_id%}" class="upload">
