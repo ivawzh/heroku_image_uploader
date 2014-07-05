@@ -17,5 +17,3 @@ Snapshots:
 ![Image of 6.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594926388-biy8wx6h3zy0t3xr-6e761d382ff2fde05ca99bb6043863b9%2F6.png)
 
 ![Image of 7.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594931700-hdsk35chvs0885mi-6e761d382ff2fde05ca99bb6043863b9%2F7.png)
-
-
