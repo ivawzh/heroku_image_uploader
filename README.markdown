@@ -1,6 +1,5 @@
-== README
-
 Please try this [live demo](http://heroku-image-uploader.herokuapp.com/).
+(NOTE preview tab is not implemented in the demo site. To see the results in preview, We will have to copy the image markdown urls and paste them in the real site https://help.heroku.com/tickets/new)
 
 Snapshots:
 
