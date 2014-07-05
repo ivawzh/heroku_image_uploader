@@ -22,6 +22,7 @@ $(function() {
 
     $('#s3_uploader').bind("s3_upload_complete", function(e, content) {
         var txt = "![Image of "+ content.filename + "](" + content.url + ")";
+        console.log(txt);
         var textarea = $("#ticket_description");
         textarea.val(textarea.val() + "\n" + txt);
     });
