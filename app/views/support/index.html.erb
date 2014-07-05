@@ -24,17 +24,17 @@
                                # key: "files/{timestamp}-{unique_id}-#{SecureRandom.hex}/${filename}",
                                expiration: 24.hours.from_now.utc.iso8601,
                                max_file_size: 100.megabytes do %>
-              <label for="image_uploader">Upload an image to demonstrate the situation. (Only allow JPG, PNG and GIF format.)</label>
-              <%= file_field_tag :file, multiple: true %>
+              <!--<label for="image_uploader">Upload an image to demonstrate the situation. (Only allow JPG, PNG and GIF format.)</label>-->
+              <%= file_field_tag :file, multiple: true, style:'display:none;' %>
           <% end %>
 
-          <script id="template-upload" type="text/x-tmpl">
-            <div id="file-{%=o.unique_id%}" class="upload">
-              {%=o.name%}
-              <div class="progress"><div class="bar" style="width: 0%"></div></div>
-            </div>
-            </script>
         </div>
+        <script id="template-upload" type="text/x-tmpl">
+                    <div id="file-{%=o.unique_id%}" class="upload">
+                      {%=o.name%}
+                      <div class="progress"><div class="bar" style="width: 0%"></div></div>
+                    </div>
+                </script>
 
         <form accept-charset="UTF-8" action="/tickets" class="new_ticket" id="new_ticket" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="TPpdeYFzBt4zzzFY9LizD84FwfcA180hlfRcqOe1Eg4=" /></div>
           <input id="ticket_query" name="ticket[query]" type="hidden" value="vvvvvvv" />
@@ -116,11 +116,21 @@
                 </p>
 
                 <div id="write_tab">
-                  <textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">
+                  <textarea cols="80" id="ticket_description" class="dragandrophandler" name="ticket[description]" rows="15">
                   </textarea>
                 </div>
                 <div id="preview_tab"></div>
+
+                <p style="text-align: right; font-size:0.9em;">Attach images (JPG, PNG, GIF, BMP) by dragging & dropping or <a id="select_file" style="cursor: pointer; font-size:0.9em;">selecting them</a>.</p>
+
+                <div class="js-progress-bars">
+                </div>
+
               </div>
+
+
+
+
               <!--
                     <textarea cols="80" id="ticket_description" name="ticket[description]" rows="15">
               </textarea>

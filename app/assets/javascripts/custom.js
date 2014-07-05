@@ -1,8 +1,9 @@
 $(function() {
+/* file uploader */
     $('#s3_uploader').S3Uploader(
         {
             remove_completed_progress_bar: true,
-//            progress_bar_target: $('.js-progress-bars'),
+            progress_bar_target: $('.js-progress-bars'),
             before_add: function(file) {
                 if (file.size > 10485760) {
                     alert('Maximum file size is 10 MB');
@@ -26,5 +27,35 @@ $(function() {
         var txt = "![Image of "+ content.filename + "](" + content.url + ")";
         var textarea = $("#ticket_description");
         textarea.val(textarea.val() + "\n" + txt);
+    });
+
+
+    $('#select_file').on('click',function(){
+        $('#s3_uploader').children("#file").click();
+    });
+
+
+/*    drag and drop to textarea  */
+    var obj = $(".dragandrophandler");
+    obj.on('dragenter', function (e)
+    {
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).css('border', '2px solid #0B85A1');
+    });
+    obj.on('dragover', function (e)
+    {
+        e.stopPropagation();
+        e.preventDefault();
+    });
+    obj.on('drop', function (e)
+    {
+
+        $(this).css('border', '2px dotted #0B85A1');
+        e.preventDefault();
+        var files = e.originalEvent.dataTransfer.files;
+
+        //pass these files to file uploader
+        $("#file").val(files)
     });
 });
