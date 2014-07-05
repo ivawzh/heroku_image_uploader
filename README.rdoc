@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Please try this [live demo](http://heroku-image-uploader.herokuapp.com/).
 
-Things you may want to cover:
+Snapshots:
 
-* Ruby version
+![Image of 1.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594826835-c83cucvtedgnl8fr-6e761d382ff2fde05ca99bb6043863b9%2F1.png)
 
-* System dependencies
+![Image of 2.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594885379-2d6vkspsf4aq0k9-6e761d382ff2fde05ca99bb6043863b9%2F2.png)
 
-* Configuration
+![Image of 3.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594894126-zd37lj68aj1yvi-6e761d382ff2fde05ca99bb6043863b9%2F3.png)
 
-* Database creation
+![Image of 4.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594896698-mg5yy8ig75a02j4i-6e761d382ff2fde05ca99bb6043863b9%2F4.png)
 
-* Database initialization
+![Image of 5.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594900833-f7std9s636bkpgb9-6e761d382ff2fde05ca99bb6043863b9%2F5.png)
 
-* How to run the test suite
+![Image of 6.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594926388-biy8wx6h3zy0t3xr-6e761d382ff2fde05ca99bb6043863b9%2F6.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Image of 7.png](https://s3-ap-southeast-2.amazonaws.com/herokusupport/temp%2Fimages%2F1404594931700-hdsk35chvs0885mi-6e761d382ff2fde05ca99bb6043863b9%2F7.png)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
